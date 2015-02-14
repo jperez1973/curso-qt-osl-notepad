@@ -135,7 +135,7 @@ void NotepadWindow::alAbrir()
         archivo.setFileName(nombreArchivo);
         if (archivo.open(QFile::ReadOnly)) {
             //Si se pudo abrir el archivo, lo leemos y colocamos su contenido en nuestro editor
-            txtEditor_->setPlainText(archivo.readAll());
+            txtEditor_->setText(archivo.readAll());
             //Se cierra el fichero
             archivo.close();
         }
