@@ -6,12 +6,13 @@
 #include <QMenuBar>
 #include <QMenu>
 #include <QAction>
-#include <QPlainTextEdit>
+#include <QTextEdit>
 #include <QFileDialog>
 #include <QFile>
 #include <QFontDialog>
-#include <QClipboard>
 #include <QKeySequence>
+#include <QToolBar>
+#include <QMessageBox>
 
 class NotepadWindow : public QMainWindow
 {
@@ -25,20 +26,27 @@ private slots:
     void alAbrir();
     void alGuardar();
     void alFuente();
+    void alSalir();
+    void alAcerca();
 
 private:
     QMenuBar*       mainMenu_;
     QMenu*          mnuArchivo_;
     QAction*        actArchivoAbrir_;
     QAction*        actArchivoGuardar_;
+    QAction*        actArchivoSalir_;
     QMenu*          mnuFormato_;
     QAction*        actFormatoFuente_;
     QMenu*          mnuEditar_;
+    QAction*        actEditarUndo_;
+    QAction*        actEditarRedo_;
+    QAction*        actEditarCortar_;
     QAction*        actEditarCopiar_;
     QAction*        actEditarPegar_;
-    QPlainTextEdit* txtEditor_;
-    QClipboard *    portapapeles_;
-
+    QMenu*          mnuAyuda_;
+    QAction*        actAyudaAcerca_;
+    QTextEdit*      txtEditor_;
+    QToolBar*       mainToolbar;
 };
 
 #endif // NOTEPADWINDOW_H

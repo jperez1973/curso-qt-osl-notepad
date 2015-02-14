@@ -1,2 +1,5 @@
-<RCC/>
-
+<RCC>
+    <qresource prefix="/imagen">
+        <file>recursos/libreoffice-oasis-drawing-template.png</file>
+    </qresource>
+</RCC>
